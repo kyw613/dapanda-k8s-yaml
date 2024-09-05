@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: dpd-service-entry
+spec:
+  hosts:
+  - sqs.ap-northeast-2.amazonaws.com
+  - dapanda-file-origin.ap-northeast-2.amazonaws.com
+  - storage.googleapis.com
+  - dapanda-pool.auth.ap-northeast-2.amazoncognito.com
+  - awscloudschool.online
+  - cognito-idp.ap-northeast-2.amazonaws.com
+  ports:
+  - number: 443
+    name: https
+    protocol: HTTPS
+  resolution: DNS
+  location: MESH_EXTERNAL

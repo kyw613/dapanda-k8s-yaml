@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  namespace: dpd-rmq-ns
+  name: dpd-rmq-sfs
+spec:
+  replicas: 1
+  serviceName: rabbitmq
+  selector:
+    matchLabels:
+      app: dpd-rmq-sfs
+  template:
+    metadata:
+      labels:
+        app: dpd-rmq-sfs
+    spec:
+      containers:
+      - name: dpd-rmq-con
+        image: rabbitmq:3-management
+        env:
+        - name: RABBITMQ_DEFAULT_USER
+          valueFrom:
+            secretKeyRef:
+              name: dpd-rmq-sec
+              key: rabbitmq-username
+        - name: RABBITMQ_DEFAULT_PASS
+          valueFrom:
+            secretKeyRef:
+              name: dpd-rmq-sec
+              key: rabbitmq-password
+        volumeMounts:
+        - mountPath: /var/lib/rabbitmq
+          name: rabbitmq-data
+      volumes:
+      - name: rabbitmq-data
+        hostPath:
+          path: /data/rabbitmq
+          type: DirectoryOrCreate

@@ -1,0 +1,104 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dpd-be-django-dep
+  name: dpd-be-django-dep
+  namespace: dpd-be-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dpd-be-django-dep
+  template:
+    metadata:
+      labels:
+        app: dpd-be-django-dep
+    spec:
+      containers:
+      - image: kimyoungwoo613/dapanda-backend-django:1.122
+        name: dpd-be-django-con
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: AWS_SECRET_ACCESS_KEY
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: SECRET_KEY
+        - name: ENGINE
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: ENGINE
+        - name: NAME
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: NAME
+        - name: USER
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: USER
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: PASSWORD
+        - name: HOST
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: HOST
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: PORT
+        - name: REDIS_BACKEND
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: REDIS_BACKEND
+        - name: REDIS_LOCATION
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: REDIS_LOCATION
+        - name: CLIENT_CLASS
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: CLIENT_CLASS
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: REDIS_PASSWORD
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: READ_HOST
+          valueFrom:
+            secretKeyRef:
+                name: dpd-be-django-sc
+                key: READ_HOST
+

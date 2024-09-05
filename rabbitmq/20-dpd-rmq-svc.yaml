@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: dpd-rmq-ns
+  name: dpd-rmq-svc
+  labels:
+    app: dpd-rmq-svc
+spec:
+  selector:
+    app: dpd-rmq-sfs
+  ports:
+  - port: 15672
+    name: http
+    targetPort: 15672
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: dpd-rmq-ns
+  name: rabbitmq
+  labels:
+    app: rabbitmq
+spec:
+  ports:
+  - port: 5672
+    name: amqp
+    targetPort: 5672
+  - port: 4369
+    name: epmd
+  - port: 25672
+    name: rabbitmq-dist
+  selector:
+    app: dpd-rmq-sfs
+  type: ClusterIP

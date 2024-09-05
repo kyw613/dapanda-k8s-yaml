@@ -1,0 +1,49 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: dpd-net-fe
+  namespace: dpd-fe-ns
+spec:
+  podSelector:
+    matchLabels: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: istio
+  egress:
+    - to:
+      - ipBlock:
+          cidr: 0.0.0.0/0
+    - to:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: dpd-rmq-ns
+    - to:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: dpd-be-ns
+    - to:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: istio
+    - to:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: kube-system
+        podSelector:
+          matchLabels:
+            k8s-app: kube-dns

@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dpd-fe-dep
+  name: dpd-fe-dep
+  namespace: dpd-fe-ns
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dpd-fe-dep
+  template:
+    metadata:
+      labels:
+        app: dpd-fe-dep
+    spec:
+      containers:
+      - image: kimms1/dapanda-frontend-nextjs:1.49
+        name: dpd-fe-con
+          # resources:
+          # requests:
+          # memory: "128Mi"
+          # cpu: "50m"
+          # limits:
+          # memory: "1024Mi"
+          # cpu: "500m"
+        ports:
+        - containerPort: 3000
+        env:
+        - name: API_URL_DJANGO
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: API_URL_DJANGO
+        - name: API_URL_SPRING
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: API_URL_SPRING
+        - name: NEXT_PUBLIC_API_URL_IMG
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: NEXT_PUBLIC_API_URL_IMG
+        - name: COGNITO_DOMAIN
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: COGNITO_DOMAIN
+        - name: COGNITO_APP_CLIENT_ID
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: COGNITO_APP_CLIENT_ID
+        - name: COGNITO_APP_CLIENT_SECRET
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: COGNITO_APP_CLIENT_SECRET
+        - name: REDIRECT_URI
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: REDIRECT_URI

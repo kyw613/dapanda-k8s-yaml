@@ -1,0 +1,51 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: dpd-net-rmq
+  namespace: dpd-rmq-ns
+spec:
+  podSelector:
+    matchLabels: {}
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+    - from:
+      - ipBlock:
+          cidr: 0.0.0.0/0
+      ports:
+      - port: 15672 # Management Console Port
+    - from:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: istio
+  egress:
+    - to:
+      - podSelector:
+          matchLabels: {}
+        namespaceSelector:
+          matchLabels:
+            tier: istio
+    # - to:
+    #   - podSelector:
+    #       matchLabels: {}
+    #     namespaceSelector:
+    #       matchLabels:
+    #         tier: dpd-fe-ns
+    # - to:
+    #   - podSelector:
+    #       matchLabels: {}
+    #     namespaceSelector:
+    #       matchLabels:
+    #         tier: dpd-be-ns
+    # - to:
+    #   - podSelector:
+    #       matchLabels: {}
+    #     namespaceSelector:
+    #       matchLabels:
+    #         kubernetes.io/metadata.name: kube-system
+    #     podSelector:
+    #       matchLabels:
+    #         k8s-app: kube-dns

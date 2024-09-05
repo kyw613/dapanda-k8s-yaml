@@ -1,0 +1,56 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: istiocontrolplane
+spec:
+  profile: default
+  meshConfig:
+    enableTracing: true
+    defaultConfig: 
+      holdApplicationUntilProxyStarts: true
+    accessLogFile: /dev/stdout 
+    outboundTrafficPolicy:
+      mode: REGISTRY_ONLY
+  components:
+    pilot:
+      enabled: true
+    egressGateways:
+      - name: istio-egressgateway
+        enabled: true
+    ingressGateways:
+      # ALB
+      - name: istio-ingressgateway
+        enabled: true
+        label:
+          istio: ingressgateway
+        k8s:
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 2000m
+              memory: 1024Mi
+          hpaSpec:
+            minReplicas: 2
+            maxReplicas: 4
+          serviceAnnotations:  # Health check 관련 정보
+            alb.ingress.kubernetes.io/healthcheck-path: /healthz/ready
+            alb.ingress.kubernetes.io/healthcheck-port: "30621" # Status Port에서 지정한 nodePort 지정
+          service:
+            type: NodePort # ingress gateway 의 NodePort 사용
+            ports:
+              - name: status-port
+                protocol: TCP
+                port: 15021
+                targetPort: 15021
+                nodePort: 30621 # 요기!
+              - name: http2
+                protocol: TCP
+                port: 80
+                targetPort: 30080
+              - name: https
+                protocol: TCP
+                port: 443
+                targetPort: 30443

@@ -1,0 +1,9 @@
+apiVersion: security.istio.io/v1
+kind: RequestAuthentication
+metadata:
+  name: authn
+  namespace: dpd-fe-ns
+spec:
+  jwtRules:
+    - issuer: https://cognito-idp.ap-northeast-2.amazonaws.com/ap-northeast-2_TBKxJgLtA
+      jwksUri: https://dapanda-pool.auth.ap-northeast-2.amazoncognito.com/oauth2/token

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dpd-fe-ns
+  labels:
+    tier: dpd-fe-ns
+    istio-injection: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dpd-be-ns
+  labels:
+    tier: dpd-be-ns
+    istio-injection: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dpd-db-ns
+  labels:
+    tier: dpd-db-ns
+    istio-injection: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd
+  labels:
+    tier: argocd

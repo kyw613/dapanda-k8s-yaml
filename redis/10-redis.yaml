@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dpd-red-cm
+  namespace: dpd-db-ns
+data:
+  redis.conf: |
+    bind 0.0.0.0
+    port 6379
+    requirepass dapanda123#
+    maxmemory 1g
+    maxmemory-policy volatile-ttl
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dpd-red-dep
+  namespace: dpd-db-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7.0.2
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: redis-config-volume
+          mountPath: /usr/local/etc/redis/redis.conf
+          subPath: redis.conf
+        command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+      volumes:
+      - name: redis-config-volume
+        configMap:
+          name: dpd-red-cm
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  namespace: dpd-db-ns
+spec:
+  type: ClusterIP
+  ports:
+    - port: 6379
+      targetPort: 6379
+  selector:
+    app: redis
+

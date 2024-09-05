@@ -1,0 +1,16 @@
+# roleBinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: read-pods
+  namespace: dpd-fe-ns
+# role이 적용될 대상
+subjects:
+- kind: Group
+  name: developer
+  apiGroup: rbac.authorization.k8s.io
+# subjects에 나열된 대상에 적용될 role 
+roleRef:
+  kind: Role
+  name: kms-fe-role # 연결할 Role 혹은 ClusterRole의 이름과 일치해야 함
+  apiGroup: rbac.authorization.k8s.io

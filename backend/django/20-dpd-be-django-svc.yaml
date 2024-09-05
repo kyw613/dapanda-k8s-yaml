@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dpd-be-django-svc
+  namespace: dpd-be-ns
+  labels:
+    app: dpd-be-django-svc
+spec:
+  selector:
+    app: dpd-be-django-dep
+  type: NodePort #type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+      nodePort: 31800

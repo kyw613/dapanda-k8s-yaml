@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dpd-fe-svc
+  namespace: dpd-fe-ns
+  labels:
+    app: dpd-fe-svc
+spec:
+  selector:
+    app: dpd-fe-dep
+  type: NodePort # type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+      nodePort: 31300
