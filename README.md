@@ -12,7 +12,7 @@ Backend - Django Github : https://github.com/kyw613/dapanda-django
 
 Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
----
+
 
 ### **[ Cloud Architecture ]**
 
