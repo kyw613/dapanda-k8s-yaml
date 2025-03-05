@@ -43,7 +43,7 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ### [ Flow Chart ]
 
-![Image](https://github.com/user-attachments/assets/df45d838-c75f-4cad-9a8f-dd8d6686a382)
+<img src="https://github.com/user-attachments/assets/df45d838-c75f-4cad-9a8f-dd8d6686a382" width="50%">
 
 ### Mornitoring
 
