@@ -16,7 +16,7 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ### **[ Cloud Architecture ]**
 
-https://github.com/kyw613/dapanda-k8s-yaml/issues/1#issue-2896801093
+![Image](https://github.com/user-attachments/assets/1be29a5e-9240-4290-be7c-1d49d820bb8f)
 
 ### **[ EKS Architecture ]**
 
@@ -49,7 +49,7 @@ https://github.com/kyw613/dapanda-k8s-yaml/issues/1#issue-2896801093
 
 ### [ DashBoard ] 
 
-https://github.com/kyw613/dapanda-k8s-yaml/issues/4#issue-2896808477
+<img width="980" alt="Image" src="https://github.com/user-attachments/assets/b4b3b095-bd87-41d1-91b8-1b04786a0e2d" />
 
 ### [ Slack과 연동 ]
 
