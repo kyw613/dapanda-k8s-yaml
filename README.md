@@ -40,11 +40,15 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 ***
 ### 📌 구현 기능 상세
 
+
+
 ### 1. CICD
 
 ### [ Flow Chart ]
 
 <img src="https://github.com/user-attachments/assets/df45d838-c75f-4cad-9a8f-dd8d6686a382" width="50%">
+
+
 
 ### 2. Mornitoring
 
@@ -55,6 +59,8 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 ### [ Slack과 연동 ]
 
 <img width="1073" alt="Image" src="https://github.com/user-attachments/assets/0a6b9c4a-af21-4643-854f-1d3f45b1cb3e" />
+
+
 
 ### 3. SES로 입찰 및 낙찰
 
