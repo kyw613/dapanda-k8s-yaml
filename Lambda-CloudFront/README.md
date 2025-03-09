@@ -1,12 +1,11 @@
 ## **📌 프로젝트 개요**
 
----
 
 웹사이트에서 대용량 이미지를 불러올 경우 로딩 속도가 느려져 사용자 경험이 저하됩니다. 이를 해결하기 위해 **AWS Lambda를 이용한 자동 이미지 리사이징**과 **CloudFront를 사용하여 캐싱 최적화**를 적용하였습니다.
 
 ### **🔎 적용 이유**
 
----
+
 
 ✔ **Lambda 활용 (이미지 리사이징 자동화)**
 
@@ -20,7 +19,7 @@
 
 ## **✨ 최종 결과**
 
----
+
 
 🎯 **AWS Lambda + S3 + CloudFront를 활용하여 완전 자동화된 이미지 최적화 시스템을 구축하였습니다!**
 
@@ -32,7 +31,7 @@
 
 ## **📂 시스템 구성**
 
----
+
 
 ### **1️⃣ S3 버킷 구성**
 
@@ -40,7 +39,7 @@
 
 📁 **리사이징된 이미지 저장:** `dapanda-file-resizing`
 
-![ap-northeast-2.console.aws.amazon.com_s3_bucket_create_region=ap-northeast-2&bucketType=general.png](attachment:977ce3f7-af90-4828-bee2-8adf67194548:f7712b2a-6e0a-4177-80cc-6265f828e811.png)
+![Image](https://github.com/user-attachments/assets/dfae2073-0d00-4338-84d5-e045788276a0)
 
 ### **2️⃣ Lambda를 활용한 이미지 리사이징**
 
@@ -51,11 +50,11 @@
 3. Lambda가 이미지를 리사이징하여 `dapanda-file-resizing` 버킷에 저장
 4. CloudFront를 통해 빠르게 제공
 
-![ap-northeast-2.console.aws.amazon.com_s3_bucket_create_region=ap-northeast-2&bucketType=general (1).png](attachment:fdd1ccd5-da26-4a26-8a7d-a5c7c51a3fbf:deab3772-2fda-4cc6-bb78-61133dcce291.png)
+![Image](https://github.com/user-attachments/assets/c4d5a216-636d-48f4-a74d-c389de64ec30)
 
 - 람다 함수 생성
 
-![Untitled](attachment:4d1849a2-c679-45a4-9813-7d91567fe82a:Untitled.png)
+![Image](https://github.com/user-attachments/assets/fd98e4d5-34ed-4499-b9cd-9364088e9756)
 
 🔑 Lambda 권한(Role) 설정
 
@@ -94,11 +93,11 @@
 }
 ```
 
-![ap-northeast-2.console.aws.amazon.com_lambda_home_region=ap-northeast-2 (2).png](attachment:107b3ba5-7b22-480c-b3c9-72a23434c117:ap-northeast-2.console.aws.amazon.com_lambda_home_regionap-northeast-2_(2).png)
+![Image](https://github.com/user-attachments/assets/3a1bdef4-b179-4798-b83d-82d883360fa1)
 
 ## **🖥️ Lambda 코드 구현**
 
----
+
 
 Lambda가 이미지를 자동으로 리사이징하여 최적화된 파일을 S3에 저장하는 코드입니다.
 
@@ -147,7 +146,7 @@ def lambda_handler(event, context):
 
 Layer에 pillow 추가
 
-![Untitled](attachment:9526c485-5ad0-4e61-b05a-93a01cdab5b8:Untitled.png)
+![Image](https://github.com/user-attachments/assets/54242637-5b63-4f95-bd58-009cb1259c7c)
 
 ## **🛠️ CloudFront 설정**
 
@@ -167,7 +166,7 @@ Layer에 pillow 추가
     - 캐시 정책 최적화
     - CORS 설정 추가하여 웹사이트에서 정상적으로 로드 가능하도록 설정
 
-![us-east-1.console.aws.amazon.com_cloudfront_v4_home_region=ap-northeast-2.png](attachment:bf53fd6e-51e3-4d15-a092-19a7d2c07ea1:us-east-1.console.aws.amazon.com_cloudfront_v4_home_regionap-northeast-2.png)
+![Image](https://github.com/user-attachments/assets/dabdaa08-6e24-4c0c-888f-2d9bb528dc4e)
 
 ![Untitled](attachment:12dacf16-2c95-47a5-bf4e-b9965694dd4b:Untitled.png)
 
