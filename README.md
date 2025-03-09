@@ -64,11 +64,14 @@ https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
 
 ### 2. Mornitoring
 
+[Mornitoring WorkBook 보기](Mornitoring/README.md)
+
 ### [ DashBoard ] 
 
 <img width="980" alt="Image" src="https://github.com/user-attachments/assets/b4b3b095-bd87-41d1-91b8-1b04786a0e2d" />
 
 ### [ Slack과 연동 ]
+[ Grafana와 Slack연동 WorkBook 보기 ](Mornitoring/Slack/README.md)
 
 <img width="1073" alt="Image" src="https://github.com/user-attachments/assets/0a6b9c4a-af21-4643-854f-1d3f45b1cb3e" />
 
