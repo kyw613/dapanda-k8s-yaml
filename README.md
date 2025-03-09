@@ -12,9 +12,9 @@ Backend - Django Github : https://github.com/kyw613/dapanda-django
 
 Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
-***
 
-### 시연 영상
+
+### [ 시연 영상 ]
 
 
 
@@ -26,9 +26,9 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ![Image](https://github.com/user-attachments/assets/7a06fc7b-4c61-4224-852b-518dcefe9780)
 
-***
 
-### 구현 기능
+
+## 구현 기능
 
 - Next.js를 활용한 웹페이지 구현 및 Django와 Spring Boot를 활용한 Backend 구현
 - Amazon EKS와 Istio를 활용한 MSA 환경 구축
@@ -41,8 +41,8 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 - Grafana, Loki, Jaeger, Amazon CloudWatch를 사용한 지속적인 모니터링
 - Chaos Mesh를 활용한 QA
 
-***
-### 📌 구현 기능 상세
+
+## 📌 구현 기능 상세
 
 
 
