@@ -1,6 +1,8 @@
+### [Mornitoring Architecture]
+
 <img width="481" alt="Image" src="https://github.com/user-attachments/assets/ddc73c77-f5a7-46c7-aa00-9ac088c94bf9" />
 
-🛠 **EC2 모니터링 서버**
+🛠 **Privcate Subnet EC2 모니터링 서버**
 
 | `Grafana` | 모니터링 및 데이터 시각화 |
 | --- | --- |
