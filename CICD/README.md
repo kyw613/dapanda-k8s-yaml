@@ -1,10 +1,10 @@
-### 🚀 AWS CI/CD 구축: CodeCommit, CodeBuild, CodePipeline, ECR, ArgoCD를 활용한 GitOps
+## 🚀 AWS CI/CD 구축: CodeCommit, CodeBuild, CodePipeline, ECR, ArgoCD를 활용한 GitOps
 
 AWS에서 **CodeCommit, CodeBuild, CodePipeline, ECR, ArgoCD**를 활용하여 CI/CD 파이프라인을 구축하는 방법을 정리합니다. 
 
 목표는 **GitOps 방식으로 애플리케이션을 배포 및 관리하는 환경을 구성하는 것**입니다.
 
----
+
 
 ## 🎯 목표
 
@@ -21,13 +21,13 @@ AWS에서 **CodeCommit, CodeBuild, CodePipeline, ECR, ArgoCD**를 활용하여 C
 
 ✔ **코드 변경이 자동으로 컨테이너 빌드 및 배포로 연결되는 파이프라인 완성**
 
----
 
-### [ CICD Architecture ]
+
+## [ CICD Architecture ]
 
 <img src="https://github.com/user-attachments/assets/df45d838-c75f-4cad-9a8f-dd8d6686a382" width="50%">
 
----
+
 
 ## 🏗️ 1. CodeCommit 레포지토리 생성 및 코드 업로드
 
@@ -63,7 +63,7 @@ git push codecommit main
 
 ![Image](https://github.com/user-attachments/assets/fb15a5c2-78b2-4e9f-bfce-5568b3bf3971)
 
----
+
 
 ## 🏗️ 2. CodeBuild를 사용하여 Docker 이미지 생성 및 ECR에 푸시
 
@@ -163,7 +163,7 @@ CodeBuild에서 사용할 주요 환경 변수를 AWS Systems Manager (SSM)에 �
 
 ![Image](https://github.com/user-attachments/assets/16008507-de98-458e-a486-182cec854c4d)
 
----
+
 
 ## 🏗️ 3. CodePipeline을 활용한 자동화
 
@@ -186,7 +186,7 @@ CodeBuild에서 사용할 주요 환경 변수를 AWS Systems Manager (SSM)에 �
 
 ![Image](https://github.com/user-attachments/assets/ef9c140c-f86c-4f6d-b5b6-6418218c3a98)
 
----
+
 
 ## 🏗️ 4. ArgoCD를 이용한 GitOps 배포
 
