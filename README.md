@@ -48,7 +48,7 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ### 1. CICD
 
-
+[CICD README 파일 보기](CICD/README.md)
 
 
 https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
