@@ -39,7 +39,7 @@
 
 📁 **리사이징된 이미지 저장:** `dapanda-file-resizing`
 
-![Image](https://github.com/user-attachments/assets/dfae2073-0d00-4338-84d5-e045788276a0)
+![Image](https://github.com/user-attachments/assets/c4d5a216-636d-48f4-a74d-c389de64ec30)
 
 ### **2️⃣ Lambda를 활용한 이미지 리사이징**
 
@@ -50,11 +50,11 @@
 3. Lambda가 이미지를 리사이징하여 `dapanda-file-resizing` 버킷에 저장
 4. CloudFront를 통해 빠르게 제공
 
-![Image](https://github.com/user-attachments/assets/c4d5a216-636d-48f4-a74d-c389de64ec30)
+![Image](https://github.com/user-attachments/assets/fd98e4d5-34ed-4499-b9cd-9364088e9756)
 
 - 람다 함수 생성
 
-![Image](https://github.com/user-attachments/assets/fd98e4d5-34ed-4499-b9cd-9364088e9756)
+![Image](https://github.com/user-attachments/assets/3a1bdef4-b179-4798-b83d-82d883360fa1)
 
 🔑 Lambda 권한(Role) 설정
 
@@ -93,7 +93,7 @@
 }
 ```
 
-![Image](https://github.com/user-attachments/assets/3a1bdef4-b179-4798-b83d-82d883360fa1)
+![Image](https://github.com/user-attachments/assets/54242637-5b63-4f95-bd58-009cb1259c7c)
 
 ## **🖥️ Lambda 코드 구현**
 
@@ -146,7 +146,7 @@ def lambda_handler(event, context):
 
 Layer에 pillow 추가
 
-![Image](https://github.com/user-attachments/assets/54242637-5b63-4f95-bd58-009cb1259c7c)
+![Image](https://github.com/user-attachments/assets/dabdaa08-6e24-4c0c-888f-2d9bb528dc4e)
 
 ## **🛠️ CloudFront 설정**
 
@@ -166,8 +166,8 @@ Layer에 pillow 추가
     - 캐시 정책 최적화
     - CORS 설정 추가하여 웹사이트에서 정상적으로 로드 가능하도록 설정
 
-![Image](https://github.com/user-attachments/assets/dabdaa08-6e24-4c0c-888f-2d9bb528dc4e)
+![Image](https://github.com/user-attachments/assets/d29cc6c2-bcbc-4b38-98f0-da241ea3e588)
 
-![Untitled](attachment:12dacf16-2c95-47a5-bf4e-b9965694dd4b:Untitled.png)
+![Image](https://github.com/user-attachments/assets/f95a5dd3-f443-4521-ba19-5676d355a82e)
 
-![Untitled](attachment:dc6ed979-501a-4a24-b6df-216a35b44e2b:Untitled.png)
+![Image](https://github.com/user-attachments/assets/e0e9437d-4ec3-4a2f-8541-b6bba8044b9b)
