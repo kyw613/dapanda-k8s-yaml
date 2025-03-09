@@ -12,7 +12,11 @@ Backend - Django Github : https://github.com/kyw613/dapanda-django
 
 Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
-<hr style="height:0.01px; border:none; background-color:#ccc;" />
+***
+
+### 시연 영상
+
+
 
 ### **[ Cloud Architecture ]**
 
@@ -44,10 +48,14 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ### 1. CICD
 
-### [ Flow Chart ]
+
 
 
 https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
+
+
+
+### [ Flow Chart ]
 
 
 <img src="https://github.com/user-attachments/assets/df45d838-c75f-4cad-9a8f-dd8d6686a382" width="50%">
