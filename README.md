@@ -14,13 +14,13 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 
 
-### [ 시연 영상 ]
+
 
 
 
 ### **[ Cloud Architecture ]**
 
-![Image](https://github.com/user-attachments/assets/1be29a5e-9240-4290-be7c-1d49d820bb8f)
+![Image](https://github.com/user-attachments/assets/cd0b3f0a-2206-4e7b-849d-c3534f1afbf6)
 
 ### **[ EKS Architecture ]**
 
@@ -80,3 +80,10 @@ https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
 ### 3. SES로 입찰 및 낙찰
 
 <img width="1075" alt="Image" src="https://github.com/user-attachments/assets/bab8b1bf-b077-4753-a3e0-8804f2dc016e" />
+
+
+### [ 시연 영상 ]
+
+
+https://github.com/user-attachments/assets/295fc55d-49d1-47a0-8633-2ff3522cba6f
+
