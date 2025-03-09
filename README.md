@@ -12,7 +12,7 @@ Backend - Django Github : https://github.com/kyw613/dapanda-django
 
 Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
-<hr style="height:0.3px; border:none; background-color:#ccc;" />
+<hr style="height:0.01px; border:none; background-color:#ccc;" />
 
 ### **[ Cloud Architecture ]**
 
