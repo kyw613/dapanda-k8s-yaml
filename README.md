@@ -75,14 +75,20 @@ https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
 
 <img width="1073" alt="Image" src="https://github.com/user-attachments/assets/0a6b9c4a-af21-4643-854f-1d3f45b1cb3e" />
 
+### 3. 이미지 리사이징 및 캐싱
+
+[ CloudFront와 Lambda를 활용한 이미지 리사이징 및 캐싱 WorkBook 보기 ] (Lambda-CloudFront/README.md)
 
 
-### 3. SES로 입찰 및 낙찰
+
+### 4. SES로 입찰 및 낙찰
 
 <img width="1075" alt="Image" src="https://github.com/user-attachments/assets/bab8b1bf-b077-4753-a3e0-8804f2dc016e" />
 
 
-### [ 시연 영상 ]
+
+
+## [ 시연 영상 ]
 
 
 https://github.com/user-attachments/assets/295fc55d-49d1-47a0-8633-2ff3522cba6f
