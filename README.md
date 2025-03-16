@@ -77,7 +77,7 @@ https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
 
 ### 3. 이미지 리사이징 및 캐싱
 
-[ CloudFront와 Lambda를 활용한 이미지 리사이징 및 캐싱 WorkBook 보기 ] (Lambda-CloudFront/README.md)
+[ CloudFront와 Lambda를 활용한 이미지 리사이징 및 캐싱 WorkBook 보기 ](Lambda-CloudFront/README.md)
 
 
 
