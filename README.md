@@ -24,7 +24,7 @@ Terraform - Terraform Github : https://github.com/kyw613/dapanda-terraform
 
 ### **[ EKS Architecture ]**
 
-![Image](https://github.com/user-attachments/assets/7a06fc7b-4c61-4224-852b-518dcefe9780)
+![Image](https://github.com/user-attachments/assets/486a73dd-9f4f-484d-bf96-764086b86fcd)
 
 
 
