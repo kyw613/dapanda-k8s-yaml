@@ -64,6 +64,13 @@ https://github.com/user-attachments/assets/f3d59a34-e2e0-4ce4-9edf-cbff8bbd18db
 
 ### 2. Mornitoring
 
+
+
+### [ Architecture ]
+
+<img width="481" alt="Image" src="https://github.com/user-attachments/assets/ddc73c77-f5a7-46c7-aa00-9ac088c94bf9" />
+
+
 [Mornitoring WorkBook 보기](Mornitoring/README.md)
 
 ### [ DashBoard ] 
