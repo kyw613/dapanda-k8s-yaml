@@ -33,13 +33,15 @@
 
 
 
-✅ 원래는 `Prometheus` + `Node Exporter` 조합을 사용하려 했음
+✅ 초기에는 Prometheus와 Node Exporter 조합을 고려하였습니다.
 
-- 오픈소스 기반이라 **비용 절감** 가능
-- 하지만 **Pull 방식**이라 `Node Exporter`에서 데이터를 가져올 수 없었음
-- `Pushgateway`를 사용해도 문제 해결이 안 됨
+오픈소스 기반으로 비용을 절감할 수 있다는 장점이 있었으나,
 
-✅ 결국 **완전 관리형 서비스인 CloudWatch**를 활용하여 문제 해결!
+Pull 방식 구조로 인해 Node Exporter가 데이터를 수집하지 못하는 문제가 발생하였습니다.
+
+Pushgateway를 도입하여 해결을 시도했지만, 근본적인 문제를 해소하지는 못했습니다.
+
+✅ 결론적으로, 완전 관리형 서비스인 CloudWatch로 전환하여 문제를 해결하였습니다.
 
 ### Istio 서비스 메시에 OpenTelemetry를 확장 제공자로 통합
 
@@ -273,7 +275,7 @@ storage_config:
     active_index_directory: /tmp/loki/boltdb-shipper-active
     cache_location: /tmp/loki/boltdb-shipper-cache
     shared_store: s3
-    resync_interval: 5m #이거 추가
+    resync_interval: 5m 
   aws:
     s3forcepathstyle: true
     bucketnames: save-loki-log
