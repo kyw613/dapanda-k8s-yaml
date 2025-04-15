@@ -275,6 +275,7 @@ kubectl -n argocd port-forward svc/argocd-server 8080:80
 ## 🔹 **Private Subnet에서 ArgoCD가 CodeCommit 감시하도록 설정**
 
 ArgoCD가 AWS CodeCommit을 모니터링할 수 있도록 **IAM User 권한을 설정**해야 합니다.
+이때 Private Repository에 저장된 이미지를 가져올수 있도록 get 권한도 함께 부여해야합니다.
 
 ![Image](https://github.com/user-attachments/assets/2870291c-3366-4c14-b94e-1c2023b54afb)
 
