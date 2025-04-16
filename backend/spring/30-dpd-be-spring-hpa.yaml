@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: dpd-be-spring-dep
   minReplicas: 3
-  maxReplicas: 3
+  maxReplicas: 5
   behavior:
     scaleDown:
       stabilizationWindowSeconds: 5
