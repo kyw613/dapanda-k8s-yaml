@@ -20,11 +20,11 @@ spec:
         name: dpd-be-django-con
         resources:
           requests:
-            memory: "64Mi"
-            cpu: "50m"
-          limits:
             memory: "256Mi"
-            cpu: "200m"
+            cpu: "256m"
+          limits:
+            memory: "512Mi"
+            cpu: "512m"
         env:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
